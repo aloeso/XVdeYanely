@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XV años de Yanely</title>
+  <!-- Agregar enlaces a la fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Freehand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Freehand&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-xd/2IY/8lDFOF0u6hrTllsUxnd9FQVq9YD1K4xiCt5qkx2vnTtP2KdjTdIQ7E0Nwz9k+j18KNJ9ifdLt6cM/iQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffdab9; /* Fondo de durazno */
+    }
+    header {
+      position: relative;
+      background-image: url('invitacion.jpg'); /* Cambia 'invitacion.jpg' por la ruta de tu imagen */
+      background-size: cover;
+      background-position: center;
+      height: 1000px; /* Altura de la imagen de encabezado */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; /* Alinea el contenido en la parte inferior */
+      color: white;
+      text-align: center;
+    }
+    .content {  
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px; /* Espacio entre el texto y el borde inferior del encabezado */
+      font-size: 24px; /* Tamaño de fuente para el contador */
+      border: 2px solid white; /* Borde alrededor del contador */
+      padding: 10px; /* Espaciado interno del contador */
+      display: inline-block; /* Para que el borde se ajuste al tamaño del contenido */
+      background-color: rgba(255, 192, 203, 0.804); /* Color de fondo rosa */
+      font-family: 'Oleo Script', cursive; /* Aplicar la fuente 'Oleo Script' */
+    }
+    table {
+      font-size: 18px; /* Tamaño de fuente para el contador */
+    }
+
+    .gif-container {
+      position: absolute; /* Posiciona el contenedor del GIF */
+      top: 317px; /* Ajusta la posición vertical */
+      left: 10px; /* Ajusta la posición horizontal */
+      max-width: 100px; /* Define el ancho máximo del contenedor */
+    }
+
+    .gif-container img {
+      max-width: 150%; /* Asegura que el GIF no exceda el ancho del contenedor */
+      height: auto; /* Mantiene la proporción del GIF */
+    }
+
+    .section {
+      background-color: #ffe4c4; /* Fondo de durazno claro */
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 45%;
+      margin-bottom: 20px;
+      border: 1px solid #ddd; /* Borde de la card */
+      border-radius: 8px; /* Bordes redondeados */
+      overflow: hidden; /* Oculta el desbordamiento */
+      background-color: aliceblue;
+    }
+
+    .card img {
+      width: 100%; /* La imagen ocupará todo el ancho de la card */
+      height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      text-align: center;
+      color: #fb7db1;
+      font-family: 'Oleo Script', cursive;
+    }
+
+    .card-content p {
+      margin-bottom: 0;
+      font-family: "PT Serif", serif;
+    }
+
+    
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      background-color: #ff6f61; /* Color de fondo del botón */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #ff403a; /* Cambia el color de fondo cuando el cursor está sobre el botón */
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .timeline-card {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      border: 1px solid #dddddd00; /* Borde de la card */
+      border-radius: 8px; /* Bordes redondeados */
+      overflow: hidden; /* Oculta el desbordamiento */
+    }
+
+    .timeline-img-container {
+      width: 100px; /* Ancho fijo del contenedor */
+      height: 100px; /* Altura fija del contenedor */
+      overflow: hidden;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .timeline-img {
+      width: auto; /* Ancho de la imagen */
+      height: 100px; /* Altura de la imagen */
+      border-radius: 50%; /* Haz la imagen redonda */
+      margin-right: 20px; /* Espacio entre la imagen y el contenido */
+    }
+
+    .timeline-content {
+      flex: 1; /* El contenido se expandirá para ocupar el espacio restante */
+    }
+
+    .timeline-content h3 {
+      margin: 0;
+      font-family: 'Oleo Script', cursive;
+      color: #fb7db1;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      font-family: "PT Serif", serif;
+    }
+
+
+    .itinerary {
+      width: 100%;
+      margin: 0; /* Anula los márgenes */
+      margin-bottom: 20px;
+      position: relative; /* Asegura que la imagen del itinerario sea responsiva */
+      font-family: "PT Serif", serif;
+    }
+
+    /* Estilos para la imagen del itinerario */
+    .itinerary img {
+      width: 100%; /* Establece el ancho al 100% del contenedor */
+      height: auto; /* Mantiene la proporción original de la imagen */
+      max-height: 800px; /* Define una altura máxima para la imagen */
+    }
+
+     /* Estilos para el color del texto en el itinerario */
+    #itinerary h2 {
+      color: rgb(255, 117, 175); /* Cambia "blue" por el color deseado */
+      font-family: 'Oleo Script', cursive;
+      text-align: center;
+    }
+
+    .confirmation {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+
+    .invitado {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: "PT Serif", serif;
+    }
+
+    .invitado h2 {
+      font-size: 28px; /* Tamaño de fuente más grande */
+      margin-bottom: 20px;
+      font-family: "Freehand", cursive;
+      font-weight: 600;
+      font-style: normal;
+      color: #ff1493; /* Color rosa fuerte */
+      text-align: center;
+    }
+
+
+    /* Estilos para el mensaje emergente */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #fefefed5;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      text-align: center;
+      font-family: "PT Serif", serif;
+    }
+
+     /* Estilos para el botón de entrada */
+     #entrarButton {
+      padding: 10px 20px;
+      background-color: #ffa398d7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #entrarButton:hover {
+      background-color: #ffa683;
+    }
+
+    /* Estilos para los botones */
+    .button-container {
+      text-align: right;
+      margin-top: 10px;
+      font-family: "PT Serif", serif;
+    }
+
+    .button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #fb7db1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Estilos para el botón playPauseButton */
+  #playPauseButton {
+    /* Cambia el color de fondo y el color del texto */
+    background-color: #ffc293;
+    color: white;
+    /* Cambia el tamaño del texto y el espaciado interno del botón */
+    font-size: 16px;
+    padding: 10px 20px;
+    /* Aplica bordes redondeados y elimina el borde */
+    border-radius: 5px;
+    border: none;
+    /* Agrega un efecto de sombra suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Agrega un cursor indicando que el botón es interactivo */
+    cursor: pointer;
+    /* Transiciones suaves para cambios de estilo */
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* Estilos para el botón cuando se coloca el cursor sobre él */
+  #playPauseButton:hover {
+    background-color: #fca48c; /* Cambia el color de fondo cuando el cursor está sobre el botón */
+  }
+
+    .button:hover {
+      background-color: #a04571;
+    }
+
+     /* Estilos para el formulario de confirmación */
+  .confirmation form {
+    background-color: #ffe4e1; /* Color de fondo rosa */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: "PT Serif", serif;
+  }
+
+  .confirmation h2 {
+    background-color: #ffe4e1; /* Color de fondo rosa */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 109, 163, 0.662); /* Sombra suave */
+    font-family: 'Oleo Script', cursive;
+    color: #fb7db1;
+  }
+
+  /* Estilos para el campo de nombre */
+  .confirmation input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff; /* Color de fondo blanco */
+    color: #333; /* Color del texto */
+  }
+
+  /* Estilos para el menú desplegable */
+  .confirmation select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff; /* Color de fondo blanco */
+    color: #333; /* Color del texto */
+  }
+
+   /* Estilos para el video de fondo */
+   .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+  }
+
+  /* Estilos para el botón de confirmar */
+  .confirmation button[type="submit"] {
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* Estilos para el botón de confirmar al pasar el cursor */
+  .confirmation button[type="submit"]:hover {
+    background-color: #45a049; /* Color verde más oscuro */
+  }
+
+  .familia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .persona {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .persona img {
+    width: 100px; /* Cambia el tamaño de la imagen según sea necesario */
+    height: 100px; /* Cambia el tamaño de la imagen según sea necesario */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    margin-bottom: 10px;
+  }
+
+  .persona p {
+    margin: 0;
+  }
+
+    @media (max-width: 768px) {
+      header {
+        height: 500px;
+      }
+
+      .card, .timeline, .confirmation {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="countdown"></h1>
+    <!-- Contenedor del GIF animado -->
+    <div class="gif-container">
+      <img src="mariposa.gif" alt="GIF animado">
+    </div>
+  </header>
+  <div class="content">
+    <div class="section">
+      <div class="invitado">
+        <!-- Contenido adicional -->
+        <h2>Rubí Y Valentina</h2>
+        <p style="text-align: center;">
+          En la travesía de la vida,<br>
+          hay instantes que vislumbramos,<br>
+          que en sueños forjamos,<br>
+          y ansiamos con fervor.<br><br>
+          
+          Uno de tales momentos<br>
+          ha tocado a nuestra puerta,<br>
+          y deseo de corazón<br>
+          compartirlo contigo.<br><br>
+          
+          ¡Tu presencia es imprescindible!<br>
+          ¡Será un regocijo inmenso<br>
+          ver tu rostro ese día!
+      </p>
+  </div>
+    </div>
+    <div class="section">
+      <div class="flex-container">
+        <div class="card">
+          <!-- Contenido de la primera card con imagen -->
+      <img src="Ceremonia.png" alt="Imagen 1">
+      <div class="card-content">
+        <h3>Santa María de Gracía</h3>
+        <p>Las espero en el templo de Santa María de Gracía para celebrar mi ceremonía a su lado.</p>
+        <p>Hora:</p>
+        <p>17:00 PM</p>
+        <p>Fecha:</p>
+        <p>29 de Junio 2024</p>
+        <div class="button-container">
+          <a href="https://maps.app.goo.gl/pA6Q6WrtPeox2o8t7" class="button">Lugar</a>
+          <a href="https://calendar.app.google/CE6xaLwLPNEibeM68" class="button">Agendar</a>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <!-- Contenido de la segunda card con imagen -->
+      <img src="Recepción.png" alt="Imagen 2">
+      <div class="card-content">
+        <h3>Olimpo la casa de los Dioses</h3>
+        <p>Las espero en el salón de eventos Olimpo la casa de los Dioses para celebrar a su lado.</p>
+        <p>Hora:</p>
+        <p>20:00 PM</p>
+        <p>Fecha:</p>
+        <p>29 de Junio 2024</p>
+        <div class="button-container">
+          <a href="https://maps.app.goo.gl/Yow7yCjPYnrPqqWc8" class="button">Lugar</a>
+          <a href="https://calendar.app.google/SdRiUyw8aKnwojhW9" class="button">Agendar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section">
+  <div class="familia">
+    <!-- Contenido de los nombres de la familia. Abuelos, mamá, padrinos -->
+    <h2>Mis personas especiales</h2>
+    <div class="persona">
+      <img src="Recurso 1.png" alt="Mamá" class="imagen-redonda">
+      <p>Mamá</p>
+      <h3>Consuelo Wendolyn Hernández Ortiz</h3>
+    </div>
+    <div class="persona">
+      <img src="Recurso 1.png" alt="Abuelo" class="imagen-redonda">
+      <p>Abuelo</p>
+      <h3>Ascensión Hernández Fonseca</h3>
+    </div>
+    <div class="persona">
+      <img src="Recurso 1.png" alt="Abuela" class="imagen-redonda">
+      <p>Abuela</p>
+      <h3>Consuelo Ortiz Casillas</h3>
+    </div>
+    <div class="persona">
+      <img src="Recurso 1.png" alt="Madrina">
+      <p>Madrina</p>
+      <h3>Kenny Martinez Lopéz</h3>
+    </div>
+    <div class="persona">
+      <img src="Recurso 1.png" alt="Padrino">
+      <p>Padrino</p>
+      <h3>Jesús Eduardo Hernández Ortiz</h3>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <video autoplay muted loop class="background-video">
+    <source src="mariposas.mp4" type="video/mp4">
+  </video>
+  <div class="timeline">
+    <div class="timeline-card">
+      <img src="bautizo.jpg" alt="Imagen 1" class="timeline-img">
+      <div class="timeline-content">
+        <h3>Bautismo</h3>
+        <p>Pequeña despues de mi bautismo</p>
+      </div>
+    </div>
+    <div class="timeline-card">
+      <img src="comunion.jpg" alt="Imagen 2" class="timeline-img">
+      <div class="timeline-content">
+        <h3>Primera comunión</h3>
+        <p>Durante mi primera comunión.</p>
+      </div>
+    </div>
+    <div class="timeline-card">
+      <img src="ahora.jpg" alt="Imagen 3" class="timeline-img">
+      <div class="timeline-content">
+        <h3>Ahora</h3>
+        <p>Yo en la actualidad</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section" id="itinerary">
+  <div class="itinerary">
+    <!-- Contenido del itinerario -->
+    <h2>Itinerario:</h2>
+    <!-- Imagen del itinerario -->
+    <img src="itinerario2.jpg" alt="Imagen del itinerario">
+  </div>
+</div>
+
+<div class="section">
+  <div class="confirmation">
+    <!-- Contenido del formulario de confirmación del asistente -->
+    <h2>Confirma tu asistencia:</h2>
+    <form id="confirmationForm" action="https://wa.me/523326406408" target="_blank">
+      <input type="hidden" name="text" value="">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" value="Rubí y Valentina" readonly>
+      <label for="confirmacion">Confirmación:</label>
+      <select id="confirmacion" name="confirmacion">
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+      </select>
+      <button type="submit" onclick="updateWhatsAppMessage();">Enviar</button>
+    </form>
+    <!-- Reemplaza XXXXXXXXXX con el número de teléfono al que se enviará el mensaje -->
+  </div>
+</div>
+
+  <!-- Mensaje emergente -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Bienvenidas a la invitación de Yanely.</p>
+      <button id="entrarButton">Entrar</button>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="audio" src="Halo (Instrumental Version).mp3" loop></audio>
+    <!-- Contenedor para el botón de pausa -->
+    <div class="button-container">
+    <!-- Botón de pausa/reproducir -->
+    <button id="playPauseButton">Reproducir</button>
+  </div>
+
+
+  <script>
+    // Actualizar el contador cada segundo
+    setInterval(updateCountdown, 1000);
+
+    function updateCountdown() {
+      // Obtener la fecha y hora actual en UTC
+      const now = new Date();
+
+      // Crear una nueva fecha para el 29 de Junio de 2024 a las 00:00 am hora de México
+      const endDate = new Date(Date.UTC(2024, 5, 29, 5, 0, 0));
+
+      const difference = endDate - now;
+
+      if (difference <= 0) {
+        document.getElementById('countdown').innerText = '¡Bienvenido!';
+      } else {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // Formato del contador con nombres de unidades debajo de las cantidades
+        document.getElementById('countdown').innerHTML = `
+          <table>
+            <tr>
+              <td>${days}</td>
+              <td>${hours}</td>
+              <td>${minutes}</td>
+              <td>${seconds}</td>
+            </tr>
+            <tr>
+              <td>Días</td>
+              <td>Horas</td>
+              <td>Minutos</td>
+              <td>Segundos</td>
+            </tr>
+          </table>
+        `;
+      }
+    }
+
+    // Inicializar el contador al cargar la página
+    updateCountdown();
+  </script>
+
+<script>
+  // Obtener el formulario y los campos relevantes
+  var confirmationForm = document.getElementById('confirmationForm');
+  var nombreInput = document.getElementById('nombre');
+  var confirmacionInput = document.getElementById('confirmacion');
+
+  // Función para actualizar el mensaje de WhatsApp con el nombre del invitado
+  function updateWhatsAppMessage() {
+    // Obtener el valor del nombre y la confirmación seleccionada
+    var nombre = nombreInput.value;
+    var confirmacion = confirmacionInput.value;
+    // Construir el mensaje de WhatsApp
+    var mensaje = 'Hola somos ' + nombre + ', y ' + (confirmacion === 'si' ? 'vamos a asistir' : 'no vamos a asistir') + ' a la fiesta. ¡Gracias por invitarnos!';
+    // Actualizar el valor del campo de texto en el formulario con el mensaje de WhatsApp
+    confirmationForm.text.value = mensaje;
+  }
+</script>
+
+<script>
+  var audio = document.getElementById('audio');
+  var playPauseButton = document.getElementById('playPauseButton');
+  var entrarButton = document.getElementById('entrarButton');
+  var isPlaying = false;
+
+  // Función para alternar entre reproducir y pausar la música
+  function togglePlayPause() {
+    if (!isPlaying) {
+      audio.play();
+      playPauseButton.textContent = 'Pausa';
+    } else {
+      audio.pause();
+      playPauseButton.textContent = 'Reproducir';
+    }
+    isPlaying = !isPlaying; // Alternar el estado
+  }
+
+  // Asignar la función de alternar a hacer clic en el botón
+  playPauseButton.addEventListener('click', togglePlayPause);
+
+  // Función para mostrar el modal al cargar la página
+  window.onload = function() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+  };
+
+   // Centrar verticalmente el botón en toda la página
+    playPauseButton.style.position = 'fixed';
+    playPauseButton.style.top = '50%';
+    playPauseButton.style.left = '90%';
+    playPauseButton.style.transform = 'translate(-50%, -50%)';
+
+  // Función para iniciar la música al hacer clic en el botón de entrar
+  entrarButton.addEventListener('click', function() {
+    togglePlayPause();
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
